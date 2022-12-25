@@ -1,0 +1,19 @@
+// Defaults
+@import "./base/basic-reset";
+@import "./base/defaults";
+
+// Utilities and variables
+@import "./utils/functions";
+@import "./utils/variables";
+@import "./utils/utilities";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+@import "./utils/animations";
+
+// Common styles
+@import "./layout/common";
+@import "./components/buttons";
+@import "./components/headings";
+
+// Sections
+@import "./layout/test";

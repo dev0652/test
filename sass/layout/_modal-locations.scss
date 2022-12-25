@@ -1,0 +1,85 @@
+// Модалка our-location
+
+.modal--our-location {
+  max-height: 365px;
+  min-width: 280px;
+  padding: 26px;
+
+  @media screen and (min-width: 768px) {
+    max-height: 458px;
+    min-width: 568px;
+    padding: 30px 58px;
+  }
+}
+
+.modal--our-location-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+
+  color: #131313;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+}
+
+.modal__map {
+  display: block;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 224px;
+  height: 199px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    min-width: 448px;
+    height: 260px;
+    margin-bottom: 32px;
+  }
+}
+
+.modal__map-button {
+  min-width: 134px;
+  min-height: 42px;
+  padding: 12px 34px;
+
+  font-size: 12px;
+  line-height: calc(15 / 12);
+
+  border: none;
+  background-color: #f8d24e;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: #0a8817;
+  }
+
+  &:focus {
+    background-color: #0a8817;
+    color: #fcfcfc;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @media screen and (min-width: 768px) {
+    min-width: 145px;
+    font-size: 14px;
+    line-height: calc(17 / 14);
+  }
+}

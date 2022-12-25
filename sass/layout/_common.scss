@@ -1,0 +1,86 @@
+/* ---------- Common ---------- */
+
+:root {
+  font-family: $primary-font;
+  font-size: $primary-font-size;
+}
+
+body {
+  letter-spacing: 0.04em;
+  color: $text-dark;
+
+  // $folder, $filename, $extension: webp
+  @include bg-image(bg, bg);
+  background-attachment: fixed;
+
+  &.scroll-locked {
+    overflow: hidden;
+  }
+}
+
+.container {
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    // width: $desktop + ($container-padding * 2);
+    width: $desktop;
+  }
+}
+
+// .overlay {
+// 	max-width: 1600px;
+// 	margin: 0 auto;
+// }
+
+.section {
+  padding: $section-padding 0;
+
+  &.dark-text,
+  &--dark-text {
+    color: $text-dark;
+  }
+
+  &.light-text,
+  &--light-text {
+    color: $text-light;
+  }
+}
+
+/* Links */
+
+.link,
+%link {
+  font-weight: 700;
+  font-size: inherit;
+  color: currentColor;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+
+/* SVG icons */
+
+.icon {
+  fill: currentColor;
+
+  @include transition(fill);
+
+  // &:hover,
+  // &:focus {
+  //   animation: 700ms ease-out forwards pulsing;
+  // }
+}
